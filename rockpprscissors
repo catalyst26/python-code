@@ -1,0 +1,27 @@
+from random import randint
+
+moves = ["rock", "paper", "scissors"]
+def rockClass():
+    computer = moves[randint(0,2)]
+
+    print("Get ready to play Rock, Paper, Scissors!")
+    user = input("You choose ").lower()
+    print("Computer chose " + computer)
+
+
+    if user == computer:
+        print("Tie round! Play Again!")
+    elif user == "rock" and computer == "paper":
+        print("Paper covers rock! Computer Wins!")
+    elif user == "rock" and computer == "scissors":
+        print("Rock crushes scissors! You Win!")
+    elif user == "paper" and computer == "rock":
+        print("Paper covers rock! You Win!")
+    elif user == "paper" and computer == "scissors":
+        print("Scissors cuts paper! Computer Wins")   
+    elif user == "scissors" and computer == "rock":
+        print("Rock crushes scissors! Computer Wins!")
+    elif user == "scissors" and computer == "paper":
+        print("Scissors cuts paper! You Win!")
+
+rockClass()
